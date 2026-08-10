@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Area Calculator</title>
+</head>
+
+<body
+    style="margin:0; font-family:Arial, sans-serif; background:linear-gradient(135deg,#74ebd5,#9face6); padding:40px;">
+    <!-- Student Details -->
+    <div style="
+    width:250px;
+    margin:0 auto 30px;
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    text-align:center;
+">
+        <h3 style="margin:0 0 10px; color:#333;">Student Details</h3>
+        <p style="margin:5px 0;"><b>Name:</b> Jay Kotwal</p>
+        <p style="margin:5px 0;"><b>Roll No:</b> 42149</p>
+        <p style="margin:5px 0;"><b>Batch:</b> R5</p>
+    </div>
+
+    <h2 style="text-align:center; color:white; font-size:36px; margin-bottom:30px;">
+        Area Calculator
+    </h2>
+
+
+    <div class="container" style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+
+        <!-- Circle -->
+        <div class="box"
+            style="background:white; padding:25px; width:280px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.2); text-align:center;">
+
+            <h3 style="color:#4CAF50;">Circle</h3>
+
+            <label><b>Radius:</b></label><br><br>
+            <input type="number" id="radius"
+                style="width:90%; padding:10px; border:1px solid #ccc; border-radius:8px;"><br><br>
+
+            <button onclick="circleArea()"
+                style="background:#4CAF50; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
+                Find Area
+            </button>
+
+            <p id="circleResult" style="margin-top:20px; font-weight:bold; color:#333;"></p>
+        </div>
+
+        <!-- Rectangle -->
+        <div class="box"
+            style="background:white; padding:25px; width:280px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.2); text-align:center;">
+
+            <h3 style="color:#2196F3;">Rectangle</h3>
+
+            <label><b>Length:</b></label><br><br>
+            <input type="number" id="length"
+                style="width:90%; padding:10px; border:1px solid #ccc; border-radius:8px;"><br><br>
+
+            <label><b>Width:</b></label><br><br>
+            <input type="number" id="width"
+                style="width:90%; padding:10px; border:1px solid #ccc; border-radius:8px;"><br><br>
+
+            <button onclick="rectangleArea()"
+                style="background:#2196F3; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
+                Find Area
+            </button>
+
+            <p id="rectangleResult" style="margin-top:20px; font-weight:bold; color:#333;"></p>
+        </div>
+
+        <!-- Triangle -->
+        <div class="box"
+            style="background:white; padding:25px; width:280px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.2); text-align:center;">
+
+            <h3 style="color:#FF5722;">Triangle</h3>
+
+            <label><b>Side A:</b></label><br><br>
+            <input type="number" id="a"
+                style="width:90%; padding:10px; border:1px solid #ccc; border-radius:8px;"><br><br>
+
+            <label><b>Side B:</b></label><br><br>
+            <input type="number" id="b"
+                style="width:90%; padding:10px; border:1px solid #ccc; border-radius:8px;"><br><br>
+
+            <label><b>Side C:</b></label><br><br>
+            <input type="number" id="c"
+                style="width:90%; padding:10px; border:1px solid #ccc; border-radius:8px;"><br><br>
+
+            <button onclick="triangleArea()"
+                style="background:#FF5722; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
+                Find Area
+            </button>
+
+            <p id="triangleResult" style="margin-top:20px; font-weight:bold; color:#333;"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
