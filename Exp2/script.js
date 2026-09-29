@@ -17,3 +17,9 @@ document.getElementById("generateBtn").addEventListener("click", function () {
 
   document.getElementById("result").innerHTML = output;
 });
+
+document.getElementById("resetBtn").addEventListener("click", function () {
+  document.getElementById("numberInput").value = "";
+  document.getElementById("rangeInput").value = "";
+  document.getElementById("result").innerHTML = "";
+});

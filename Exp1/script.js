@@ -32,3 +32,15 @@ function triangleArea() {
   document.getElementById("triangleResult").innerHTML =
     "Area =  " + area.toFixed(2) + " sq Unit";
 }
+
+function resetAll() {
+  document.getElementById("radius").value = "";
+  document.getElementById("circleResult").innerHTML = "";
+  document.getElementById("length").value = "";
+  document.getElementById("width").value = "";
+  document.getElementById("rectangleResult").innerHTML = "";
+  document.getElementById("a").value = "";
+  document.getElementById("b").value = "";
+  document.getElementById("c").value = "";
+  document.getElementById("triangleResult").innerHTML = "";
+}

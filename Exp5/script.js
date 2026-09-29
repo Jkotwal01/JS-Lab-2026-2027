@@ -61,3 +61,10 @@ function startCountdown() {
     }
   }, 1000);
 }
+
+function resetCountdown() {
+  clearInterval(countdown);
+  document.getElementById("endDate").value = "";
+  document.getElementById("endTime").value = "";
+  document.getElementById("countdown").innerHTML = "00 Days 00 Hours 00 Minutes 00 Seconds";
+}

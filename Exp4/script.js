@@ -43,3 +43,9 @@ function compareWithLocaleCompare() {
   const isMatch = str1.localeCompare(str2) === 0;
   showResult(isMatch, "localeCompare()");
 }
+
+function resetAll() {
+  document.getElementById("stringOne").value = "";
+  document.getElementById("stringTwo").value = "";
+  document.getElementById("outputDisplay").innerHTML = "Result will appear here...";
+}

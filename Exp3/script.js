@@ -61,3 +61,10 @@ function checkPalindrome() {
     updateOutput(`No, "${str}" is not a palindrome.`);
   }
 }
+
+function resetAll() {
+  document.getElementById("mainString").value = "";
+  document.getElementById("fromChar").value = "";
+  document.getElementById("toChar").value = "";
+  document.getElementById("outputDisplay").innerText = "Result will appear here...";
+}
