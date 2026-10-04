@@ -5,96 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Manipulator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body
-    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; box-sizing: border-box;">
+    class="style-class-1">
 
     <!-- Student Details -->
-    <div style="
-        width: 250px;
-        margin: 0 auto 15px;
-        background: white;
-        padding: 12px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        text-align: center;
-        box-sizing: border-box;
-    ">
-        <h3 style="margin: 0 0 6px; color: #333; font-size: 16px;">Student Details</h3>
-        <p style="margin: 3px 0; font-size: 12px; color: #555;"><b>Name:</b> Jay Kotwal</p>
-        <p style="margin: 3px 0; font-size: 12px; color: #555;"><b>Roll No:</b> 42149</p>
-        <p style="margin: 3px 0; font-size: 12px; color: #555;"><b>Batch:</b> R5</p>
+    <div class="style-class-2">
+        <h3 class="style-class-3">Student Details</h3>
+        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
+        <p class="style-class-4"><b>Roll No:</b> 42149</p>
+        <p class="style-class-4"><b>Batch:</b> R5</p>
     </div>
 
     <!-- Main Container -->
     <div
-        style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); width: 100%; max-width: 400px; box-sizing: border-box;">
+        class="style-class-5">
         <h3
-            style="color: #333333; margin-top: 0; margin-bottom: 15px; font-weight: 600; text-align: center; border-bottom: 2px solid #eaeaea; padding-bottom: 8px; font-size: 18px;">
+            class="style-class-6">
             String Manipulator</h3>
 
         <!-- Input Section -->
-        <div style="margin-bottom: 15px;">
+        <div class="style-class-7">
             <label for="mainString"
-                style="display: block; font-weight: 600; color: #555555; margin-bottom: 6px; font-size: 12px;">Enter
+                class="input-label">Enter
                 String:</label>
             <input type="text" id="mainString" placeholder="Type your text here..."
-                style="width: 100%; padding: 10px; border: 1px solid #cccccc; border-radius: 5px; font-size: 14px; box-sizing: border-box; outline: none;">
+                class="input-field">
         </div>
 
         <!-- Action 1: Reverse -->
         <div
-            style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 12px; border: 1px solid #ececec;">
-            <h5 style="margin: 0 0 8px 0; color: #0056b3; font-size: 13px; font-weight: 600;">1. Reverse String</h5>
+            class="style-class-10">
+            <h5 class="style-class-11">1. Reverse String</h5>
             <button onclick="reverseString()"
-                style="width: 100%; background-color: #007bff; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">Reverse
+                class="style-class-12">Reverse
                 Now</button>
         </div>
 
         <!-- Action 2: Replace -->
         <div
-            style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 12px; border: 1px solid #ececec;">
-            <h5 style="margin: 0 0 8px 0; color: #28a745; font-size: 13px; font-weight: 600;">2. Replace Character</h5>
-            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-                <div style="flex: 1;">
+            class="style-class-10">
+            <h5 class="style-class-13">2. Replace Character</h5>
+            <div class="style-class-14">
+                <div class="style-class-15">
                     <label for="fromChar"
-                        style="display: block; font-size: 11px; color: #666; margin-bottom: 3px;">Replace this:</label>
+                        class="style-class-16">Replace this:</label>
                     <input type="text" id="fromChar" maxlength="1" placeholder="e.g., a"
-                        style="width: 100%; padding: 6px; border: 1px solid #cccccc; border-radius: 4px; font-size: 13px; box-sizing: border-box;">
+                        class="style-class-17">
                 </div>
-                <div style="flex: 1;">
-                    <label for="toChar" style="display: block; font-size: 11px; color: #666; margin-bottom: 3px;">With
+                <div class="style-class-15">
+                    <label for="toChar" class="style-class-16">With
                         this:</label>
                     <input type="text" id="toChar" maxlength="1" placeholder="e.g., x"
-                        style="width: 100%; padding: 6px; border: 1px solid #cccccc; border-radius: 4px; font-size: 13px; box-sizing: border-box;">
+                        class="style-class-17">
                 </div>
             </div>
             <button onclick="replaceCharacter()"
-                style="width: 100%; background-color: #28a745; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">Replace
+                class="style-class-18">Replace
                 Now</button>
         </div>
 
         <!-- Action 3: Palindrome Checker -->
         <div
-            style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #ececec;">
-            <h5 style="margin: 0 0 8px 0; color: #17a2b8; font-size: 13px; font-weight: 600;">3. Check Palindrome</h5>
+            class="style-class-19">
+            <h5 class="style-class-20">3. Check Palindrome</h5>
             <button onclick="checkPalindrome()"
-                style="width: 100%; background-color: #17a2b8; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">Check
+                class="style-class-21">Check
                 Status</button>
         </div>
 
         <!-- Display Output Box -->
         <div
-            style="margin-top: 15px; padding: 12px; background-color: #e9ecef; border-left: 4px solid #6c757d; border-radius: 4px;">
+            class="style-class-22">
             <span
-                style="display: block; font-size: 11px; font-weight: 600; color: #495057; text-transform: uppercase; margin-bottom: 4px;">Output:</span>
-            <div id="outputDisplay" style="font-size: 15px; font-weight: bold; color: #212529; word-break: break-all;">
+                class="style-class-23">Output:</span>
+            <div id="outputDisplay" class="style-class-24">
                 Result will appear here...</div>
         </div>
 
         <button onclick="resetAll()"
-            style="width: 100%; background-color: #dc3545; color: white; border: none; padding: 8px; margin-top: 15px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">
+            class="style-class-25">
             Reset
         </button>
     </div>

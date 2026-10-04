@@ -5,79 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Comparator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body
-    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; box-sizing: border-box;">
+    class="style-class-1">
 
     <div
-        style="width: 250px; margin: 0 auto 15px; background: white; padding: 12px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; box-sizing: border-box;">
-        <h3 style="margin: 0 0 6px; color: #333; font-size: 16px;">Student Details</h3>
-        <p style="margin: 3px 0; font-size: 12px; color: #555;"><b>Name:</b> Jay Kotwal</p>
-        <p style="margin: 3px 0; font-size: 12px; color: #555;"><b>Roll No:</b> 42149</p>
-        <p style="margin: 3px 0; font-size: 12px; color: #555;"><b>Batch:</b> R5</p>
+        class="style-class-2">
+        <h3 class="style-class-3">Student Details</h3>
+        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
+        <p class="style-class-4"><b>Roll No:</b> 42149</p>
+        <p class="style-class-4"><b>Batch:</b> R5</p>
     </div>
 
     <div
-        style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); width: 100%; max-width: 400px; box-sizing: border-box;">
+        class="style-class-5">
         <h3
-            style="color: #333333; margin-top: 0; margin-bottom: 15px; font-weight: 600; text-align: center; border-bottom: 2px solid #eaeaea; padding-bottom: 8px; font-size: 18px;">
+            class="style-class-6">
             String Comparator</h3>
 
-        <div style="margin-bottom: 12px;">
+        <div class="style-class-7">
             <label for="stringOne"
-                style="display: block; font-weight: 600; color: #555555; margin-bottom: 6px; font-size: 12px;">String
+                class="input-label">String
                 1:</label>
             <input type="text" id="stringOne" placeholder="Enter first string..."
-                style="width: 100%; padding: 10px; border: 1px solid #cccccc; border-radius: 5px; font-size: 14px; box-sizing: border-box; outline: none;">
+                class="input-field">
         </div>
 
-        <div style="margin-bottom: 15px;">
+        <div class="style-class-10">
             <label for="stringTwo"
-                style="display: block; font-weight: 600; color: #555555; margin-bottom: 6px; font-size: 12px;">String
+                class="input-label">String
                 2:</label>
             <input type="text" id="stringTwo" placeholder="Enter second string..."
-                style="width: 100%; padding: 10px; border: 1px solid #cccccc; border-radius: 5px; font-size: 14px; box-sizing: border-box; outline: none;">
+                class="input-field">
         </div>
 
         <div
-            style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 12px; border: 1px solid #ececec;">
-            <h5 style="margin: 0 0 4px 0; color: #007bff; font-size: 13px; font-weight: 600;">Method 1: Strictly Equal
+            class="style-class-11">
+            <h5 class="style-class-12">Method 1: Strictly Equal
                 To (===)</h5>
             <button onclick="compareWithStrictEquality()"
-                style="width: 100%; background-color: #007bff; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">Compare
+                class="style-class-13">Compare
                 with ===</button>
         </div>
 
         <div
-            style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 12px; border: 1px solid #ececec;">
-            <h5 style="margin: 0 0 4px 0; color: #28a745; font-size: 13px; font-weight: 600;">Method 2: Using Length
+            class="style-class-11">
+            <h5 class="style-class-14">Method 2: Using Length
                 Check</h5>
             <button onclick="compareWithLengthLoop()"
-                style="width: 100%; background-color: #28a745; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">Compare
+                class="style-class-15">Compare
                 with Length</button>
         </div>
 
         <div
-            style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #ececec;">
-            <h5 style="margin: 0 0 4px 0; color: #17a2b8; font-size: 13px; font-weight: 600;">Method 3: localeCompare()
+            class="style-class-16">
+            <h5 class="style-class-17">Method 3: localeCompare()
                 Function</h5>
             <button onclick="compareWithLocaleCompare()"
-                style="width: 100%; background-color: #17a2b8; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">Compare
+                class="style-class-18">Compare
                 with localeCompare</button>
         </div>
 
         <div
-            style="margin-top: 15px; padding: 12px; background-color: #e9ecef; border-left: 4px solid #6c757d; border-radius: 4px;">
+            class="style-class-19">
             <span
-                style="display: block; font-size: 11px; font-weight: 600; color: #495057; text-transform: uppercase; margin-bottom: 4px;">Output
+                class="style-class-20">Output
                 Window:</span>
-            <div id="outputDisplay" style="font-size: 14px; font-weight: bold; color: #212529; word-break: break-all;">
+            <div id="outputDisplay" class="style-class-21">
                 Result will appear here...</div>
         </div>
 
         <button onclick="resetAll()"
-            style="width: 100%; background-color: #dc3545; color: white; border: none; padding: 8px; margin-top: 15px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;">
+            class="style-class-22">
             Reset
         </button>
     </div>

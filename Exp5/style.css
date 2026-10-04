@@ -31,3 +31,16 @@ button:hover {
     margin-top: 30px;
     color: darkred;
 }
+
+.style-class-1 {
+    width: 250px; margin: 0 auto 15px; background: white; padding: 12px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; box-sizing: border-box;
+}
+.style-class-2 {
+    margin: 0 0 6px; color: #333; font-size: 16px;
+}
+.style-class-3 {
+    margin: 3px 0; font-size: 12px; color: #555;
+}
+.style-class-4 {
+    margin-left: 10px;
+}

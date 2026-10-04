@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations & Objects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="style-class-1">
+
+    <!-- Student Details -->
+    <div class="style-class-2">
+        <h3 class="style-class-3">Student Details</h3>
+        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
+        <p class="style-class-4"><b>Roll No:</b> 42149</p>
+        <p class="style-class-4"><b>Batch:</b> R5</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="style-class-5">
+        <h3 class="style-class-6">
+            Concept of Arrays & Objects
+        </h3>
+
+        <!-- Array Creation -->
+        <div class="style-class-7">
+            <div class="style-class-8">
+                <label class="input-label">Step 1 & 2: Array Size:</label>
+                <input type="number" id="arraySize" placeholder="e.g. 5" class="input-field">
+            </div>
+            <button onclick="createArray()" class="style-class-11">Create Array</button>
+        </div>
+
+        <!-- Add Element -->
+        <div class="style-class-12">
+            <h5 class="style-class-13">Step 3 & 6: Add/Remove Element</h5>
+            <div class="style-class-14">
+                <div class="style-class-15">
+                    <input type="text" id="inputValue" placeholder="Value to Add" class="style-class-16">
+                </div>
+                <div class="style-class-8">
+                    <select id="inputType" class="style-class-16">
+                        <option value="string">String</option>
+                        <option value="number">Number</option>
+                        <option value="object">Object</option>
+                        <option value="array">Array</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="style-class-17">
+                <button onclick="pushElement()" class="style-class-18">Push ()</button>
+                <button onclick="unshiftElement()" class="style-class-18">Unshift ()</button>
+                <button onclick="popElement()" class="style-class-19">Pop ()</button>
+                <button onclick="shiftElement()" class="style-class-19">Shift ()</button>
+            </div>
+        </div>
+
+        <!-- Check Is Array -->
+        <div class="style-class-20">
+            <h5 class="style-class-21">Step 4: Check if Appended Object is Array</h5>
+            <button onclick="checkIsArray()" class="style-class-22">Run isArray() on Last Element</button>
+        </div>
+
+        <!-- Output Window -->
+        <div class="style-class-23">
+            <span class="style-class-24">Output Window:</span>
+            <div id="outputDisplay" class="style-class-25">
+                Current Array: []<br><br>Result: 
+            </div>
+        </div>
+
+        <button onclick="resetAll()" class="style-class-26">
+            Reset All
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

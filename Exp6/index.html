@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="style-class-1">
+
+    <!-- Student Details -->
+    <div class="style-class-2">
+        <h3 class="style-class-3">Student Details</h3>
+        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
+        <p class="style-class-4"><b>Roll No:</b> 42149</p>
+        <p class="style-class-4"><b>Batch:</b> R5</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="style-class-5">
+        <h3 class="style-class-6">
+            Array Operations
+        </h3>
+
+        <!-- Parameters Inputs -->
+        <div class="style-class-7">
+            <div class="style-class-8">
+                <label class="input-label">1. Array Length:</label>
+                <input type="number" id="arrayLength" placeholder="e.g. 5" class="input-field">
+            </div>
+            <button onclick="generateArray()" class="style-class-11">Generate Array</button>
+        </div>
+
+        <div class="style-class-12">
+            <div class="style-class-8">
+                <label class="input-label">2. Element to Delete:</label>
+                <input type="text" id="deleteInput" placeholder="e.g. 3" class="input-field">
+            </div>
+            <div class="style-class-8">
+                <label class="input-label">3. Element to Search:</label>
+                <input type="text" id="searchInput" placeholder="e.g. 4" class="input-field">
+            </div>
+        </div>
+
+        <!-- Operations -->
+        <div class="style-class-13">
+            <h5 class="style-class-14">Remove Element</h5>
+            <div class="style-class-15">
+                <button onclick="removeElementWithMethod()" class="style-class-16">With Array Method</button>
+                <button onclick="removeElementWithoutMethod()" class="style-class-17">Without Array Method</button>
+            </div>
+        </div>
+
+        <div class="style-class-13">
+            <h5 class="style-class-18">Check Contains Value</h5>
+            <div class="style-class-15">
+                <button onclick="checkContainsWithMethod()" class="style-class-19">With Array Method</button>
+                <button onclick="checkContainsWithoutMethod()" class="style-class-20">Without Array Method</button>
+            </div>
+        </div>
+
+        <div class="style-class-21">
+            <h5 class="style-class-22">Empty Array</h5>
+            <button onclick="emptyArray()" class="style-class-23">Empty Array</button>
+        </div>
+
+        <div class="style-class-24">
+            <span class="style-class-25">Output Window:</span>
+            <div id="outputDisplay" class="style-class-26">
+                Current Array: []<br><br>Result: 
+            </div>
+        </div>
+
+        <button onclick="resetAll()" class="style-class-27">
+            Reset All
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

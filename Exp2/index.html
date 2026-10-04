@@ -5,80 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiplication Table Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="margin:0; padding:30px; font-family:Arial,Helvetica,sans-serif; background:#f4f6f9;">
+<body class="style-class-1">
 
     <!-- Student Details -->
-    <div style="
-    width:250px;
-    margin:0 auto 25px;
-    background:white;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 6px 15px rgba(0,0,0,0.2);
-    text-align:center;
-">
-        <h3 style="margin:0 0 10px; color:#333; font-size:20px;">Student Details</h3>
-        <p style="margin:5px 0; font-size:14px;"><b>Name:</b> Jay Kotwal</p>
-        <p style="margin:5px 0; font-size:14px;"><b>Roll No:</b> 42149</p>
-        <p style="margin:5px 0; font-size:14px;"><b>Batch:</b> R5</p>
+    <div class="style-class-2">
+        <h3 class="style-class-3">Student Details</h3>
+        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
+        <p class="style-class-4"><b>Roll No:</b> 42149</p>
+        <p class="style-class-4"><b>Batch:</b> R5</p>
     </div>
 
     <!-- Main Container -->
-    <div style="
-    max-width:500px;
-    margin:auto;
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-">
+    <div class="style-class-5">
 
-        <h2 style="text-align:center; color:#2c3e50; margin-bottom:20px; font-size:24px;">
+        <h2 class="style-class-6">
             Multiplication Table Generator
         </h2>
 
-        <table style="width:100%; border-collapse:collapse;">
+        <table class="style-class-7">
             <tr>
-                <td style="padding:8px; font-weight:bold; font-size:15px;">Number</td>
-                <td style="padding:8px;">
+                <td class="style-class-8">Number</td>
+                <td class="style-class-9">
                     <input type="number" id="numberInput" placeholder="Enter Number"
-                        style="width:100%; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:14px; box-sizing:border-box;">
+                        class="style-class-10">
                 </td>
             </tr>
 
             <tr>
-                <td style="padding:8px; font-weight:bold; font-size:15px;">Range</td>
-                <td style="padding:8px;">
+                <td class="style-class-8">Range</td>
+                <td class="style-class-9">
                     <input type="number" id="rangeInput" placeholder="Enter Range"
-                        style="width:100%; padding:8px; border:1px solid #ccc; border-radius:6px; font-size:14px; box-sizing:border-box;">
+                        class="style-class-10">
                 </td>
             </tr>
 
             <tr>
-                <td colspan="2" style="padding:15px; text-align:center;">
-                    <button id="generateBtn" style="
-                        background:#007bff;
-                        color:white;
-                        border:none;
-                        padding:10px 20px;
-                        border-radius:6px;
-                        font-size:15px;
-                        cursor:pointer;
-                    ">
+                <td colspan="2" class="style-class-11">
+                    <button id="generateBtn" class="style-class-12">
                         Generate Table
                     </button>
-                    <button id="resetBtn" style="
-                        background:#dc3545;
-                        color:white;
-                        border:none;
-                        padding:10px 20px;
-                        border-radius:6px;
-                        font-size:15px;
-                        cursor:pointer;
-                        margin-left: 10px;
-                    ">
+                    <button id="resetBtn" class="style-class-13">
                         Reset
                     </button>
                 </td>
@@ -86,17 +55,7 @@
         </table>
 
         <!-- Output -->
-        <div id="result" style="
-            margin-top:20px;
-            background:#fafafa;
-            border:1px solid #ddd;
-            border-radius:8px;
-            padding:12px;
-            font-size:16px;
-            line-height:1.8;
-            color:#2c3e50;
-            font-weight:bold;
-        ">
+        <div id="result" class="style-class-14">
         </div>
 
     </div>

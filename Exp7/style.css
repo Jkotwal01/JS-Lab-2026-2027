@@ -1,0 +1,79 @@
+
+.style-class-1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; box-sizing: border-box;
+}
+.style-class-2 {
+    width: 250px; margin: 0 auto 15px; background: white; padding: 12px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; box-sizing: border-box;
+}
+.style-class-3 {
+    margin: 0 0 6px; color: #333; font-size: 16px;
+}
+.style-class-4 {
+    margin: 3px 0; font-size: 12px; color: #555;
+}
+.style-class-5 {
+    background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); width: 100%; max-width: 500px; box-sizing: border-box;
+}
+.style-class-6 {
+    color: #333333; margin-top: 0; margin-bottom: 15px; font-weight: 600; text-align: center; border-bottom: 2px solid #eaeaea; padding-bottom: 8px; font-size: 18px;
+}
+.style-class-7 {
+    margin-bottom: 15px; display: flex; gap: 10px; align-items: end;
+}
+.style-class-8 {
+    flex: 1;
+}
+.input-label {
+    display: block; font-weight: 600; color: #555555; margin-bottom: 6px; font-size: 12px;
+}
+.input-field {
+    width: 100%; padding: 10px; border: 1px solid #cccccc; border-radius: 5px; font-size: 14px; box-sizing: border-box; outline: none;
+}
+.style-class-11 {
+    background-color: #17a2b8; color: white; border: none; padding: 10px 15px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;
+}
+.style-class-12 {
+    background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 12px; border: 1px solid #ececec;
+}
+.style-class-13 {
+    margin: 0 0 8px 0; color: #007bff; font-size: 13px; font-weight: 600;
+}
+.style-class-14 {
+    display: flex; gap: 10px; margin-bottom: 10px;
+}
+.style-class-15 {
+    flex: 2;
+}
+.style-class-16 {
+    width: 100%; padding: 8px; border: 1px solid #cccccc; border-radius: 5px; font-size: 13px; box-sizing: border-box; outline: none;
+}
+.style-class-17 {
+    display: flex; gap: 8px; flex-wrap: wrap;
+}
+.style-class-18 {
+    flex: 1; background-color: #007bff; color: white; border: none; padding: 8px; font-size: 12px; font-weight: 600; border-radius: 5px; cursor: pointer;
+}
+.style-class-19 {
+    flex: 1; background-color: #dc3545; color: white; border: none; padding: 8px; font-size: 12px; font-weight: 600; border-radius: 5px; cursor: pointer;
+}
+.style-class-20 {
+    background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 15px; border: 1px solid #ececec;
+}
+.style-class-21 {
+    margin: 0 0 8px 0; color: #28a745; font-size: 13px; font-weight: 600;
+}
+.style-class-22 {
+    width: 100%; background-color: #28a745; color: white; border: none; padding: 8px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;
+}
+.style-class-23 {
+    margin-top: 15px; padding: 12px; background-color: #e9ecef; border-left: 4px solid #6c757d; border-radius: 4px;
+}
+.style-class-24 {
+    display: block; font-size: 11px; font-weight: 600; color: #495057; text-transform: uppercase; margin-bottom: 4px;
+}
+.style-class-25 {
+    font-size: 14px; font-weight: bold; color: #212529; word-break: break-all;
+}
+.style-class-26 {
+    width: 100%; background-color: #6c757d; color: white; border: none; padding: 8px; margin-top: 15px; font-size: 13px; font-weight: 600; border-radius: 5px; cursor: pointer;
+}
