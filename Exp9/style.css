@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+    background-color: #eef3f7;
+    color: #1f2933;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 0 0 20px;
+    color: #17324d;
+    text-align: center;
+}
+
+form {
+    width: min(100%, 560px);
+    padding: 28px;
+    border: 1px solid #c4d0da;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(31, 41, 51, 0.12);
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label,
+fieldset legend {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #30475e;
+}
+
+input[type="text"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #aebdca;
+    border-radius: 5px;
+    color: #1f2933;
+    font: inherit;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: 2px solid #74a9d8;
+    border-color: #3978ad;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.location-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+fieldset {
+    margin: 0 0 18px;
+    padding: 14px;
+    border: 1px solid #aebdca;
+    border-radius: 5px;
+}
+
+fieldset legend {
+    padding: 0 5px;
+    margin-bottom: 0;
+}
+
+.gender-options {
+    display: flex;
+    gap: 22px;
+}
+
+.gender-options label {
+    margin: 0;
+    font-weight: normal;
+    color: #1f2933;
+}
+
+.gender-options input {
+    margin-right: 6px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #246b9e;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1b547d;
+}
+
+#message {
+    width: min(100%, 560px);
+    margin: 16px 0 0;
+    padding: 0;
+}
+
+#message ul {
+    margin: 0;
+    padding: 14px 18px 14px 34px;
+    border: 1px solid #dc6b6b;
+    border-radius: 5px;
+    background-color: #fff1f1;
+}
+
+#message li + li {
+    margin-top: 6px;
+}
+
+#message.success {
+    padding: 14px 18px;
+    border: 1px solid #65a879;
+    border-radius: 5px;
+    background-color: #eefaf0;
+}
+
+@media (max-width: 520px) {
+    form {
+        padding: 20px;
+    }
+    .location-fields {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
