@@ -6,99 +6,59 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body
-    class="style-class-1">
-    <!-- Student Details -->
-    <div class="style-class-2">
-        <h3 class="style-class-3">Student Details</h3>
-        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
-        <p class="style-class-4"><b>Roll No:</b> 42149</p>
-        <p class="style-class-4"><b>Batch:</b> R5</p>
-    </div>
-
-    <h2 class="style-class-5">
-        Area Calculator
-    </h2>
-
-
-    <div class="container" class="style-class-6">
-
-        <!-- Circle -->
-        <div class="box"
-            class="style-class-7">
-
-            <h3 class="style-class-8">Circle</h3>
-
-            <label><b>Radius:</b></label><br><br>
-            <input type="number" id="radius"
-                class="style-class-9"><br><br>
-
-            <button onclick="circleArea()"
-                class="style-class-10">
-                Find Area
-            </button>
-
-            <p id="circleResult" class="style-class-11"></p>
+<body>
+    <div class="container">
+        <!-- Student Details -->
+        <div class="card" style="margin-bottom: 30px; max-width: 300px; margin-left: auto; margin-right: auto; padding: 10px;">
+            <h3 style="margin-top: 10px;">Student Details</h3>
+            <p style="margin: 5px 0;"><b>Name:</b> Jay Kotwal</p>
+            <p style="margin: 5px 0;"><b>Roll No:</b> 42149</p>
+            <p style="margin: 5px 0;"><b>Batch:</b> R5</p>
         </div>
 
-        <!-- Rectangle -->
-        <div class="box"
-            class="style-class-7">
+        <h1>Area Calculator</h1>
 
-            <h3 class="style-class-12">Rectangle</h3>
+        <div class="cards">
+            <!-- Circle -->
+            <div class="card">
+                <h3>Circle</h3>
+                <label><b>Radius:</b></label>
+                <input type="number" id="radius">
+                <button onclick="circleArea()">Find Area</button>
+                <p id="circleResult" style="font-weight: bold; margin-top: 15px;"></p>
+            </div>
 
-            <label><b>Length:</b></label><br><br>
-            <input type="number" id="length"
-                class="style-class-9"><br><br>
+            <!-- Rectangle -->
+            <div class="card">
+                <h3>Rectangle</h3>
+                <label><b>Length:</b></label>
+                <input type="number" id="length">
+                <label><b>Width:</b></label>
+                <input type="number" id="width">
+                <button onclick="rectangleArea()">Find Area</button>
+                <p id="rectangleResult" style="font-weight: bold; margin-top: 15px;"></p>
+            </div>
 
-            <label><b>Width:</b></label><br><br>
-            <input type="number" id="width"
-                class="style-class-9"><br><br>
-
-            <button onclick="rectangleArea()"
-                class="style-class-13">
-                Find Area
-            </button>
-
-            <p id="rectangleResult" class="style-class-11"></p>
+            <!-- Triangle -->
+            <div class="card">
+                <h3>Triangle</h3>
+                <label><b>Side A:</b></label>
+                <input type="number" id="a">
+                <label><b>Side B:</b></label>
+                <input type="number" id="b">
+                <label><b>Side C:</b></label>
+                <input type="number" id="c">
+                <button onclick="triangleArea()">Find Area</button>
+                <p id="triangleResult" style="font-weight: bold; margin-top: 15px;"></p>
+            </div>
         </div>
 
-        <!-- Triangle -->
-        <div class="box"
-            class="style-class-7">
-
-            <h3 class="style-class-14">Triangle</h3>
-
-            <label><b>Side A:</b></label><br><br>
-            <input type="number" id="a"
-                class="style-class-9"><br><br>
-
-            <label><b>Side B:</b></label><br><br>
-            <input type="number" id="b"
-                class="style-class-9"><br><br>
-
-            <label><b>Side C:</b></label><br><br>
-            <input type="number" id="c"
-                class="style-class-9"><br><br>
-
-            <button onclick="triangleArea()"
-                class="style-class-15">
-                Find Area
-            </button>
-
-            <p id="triangleResult" class="style-class-11"></p>
+        <div style="margin-top: 30px; max-width: 200px; margin-left: auto; margin-right: auto;">
+            <button onclick="resetAll()" style="background: #f44336;">Reset All</button>
         </div>
-
-    </div>
-
-    <div class="style-class-16">
-        <button onclick="resetAll()" class="style-class-17">
-            Reset All
-        </button>
     </div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
