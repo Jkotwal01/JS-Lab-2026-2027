@@ -33,12 +33,18 @@ function triangleArea() {
     "Area =  " + area.toFixed(2) + " sq Unit";
 }
 
-function resetAll() {
+function resetAllC() {
   document.getElementById("radius").value = "";
   document.getElementById("circleResult").innerHTML = "";
+}
+
+function resetAllR() {
   document.getElementById("length").value = "";
   document.getElementById("width").value = "";
   document.getElementById("rectangleResult").innerHTML = "";
+}
+
+function resetAllT() {
   document.getElementById("a").value = "";
   document.getElementById("b").value = "";
   document.getElementById("c").value = "";
