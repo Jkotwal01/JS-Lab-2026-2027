@@ -5,7 +5,7 @@ function circleArea() {
   let area = 3.14 * r * r;
 
   document.getElementById("circleResult").innerHTML =
-    "Area = " + area.toFixed(2);
+    "Area = " + area.toFixed(2) + " Sq.Unit";
 }
 
 // Area of Rectangle
@@ -15,7 +15,8 @@ function rectangleArea() {
 
   let area = l * w;
 
-  document.getElementById("rectangleResult").innerHTML = "Area = " + area;
+  document.getElementById("rectangleResult").innerHTML =
+    "Area = " + area + " Sq.Unit";
 }
 
 // Area of Triangle using Heron's Formula
@@ -29,7 +30,7 @@ function triangleArea() {
   let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
   document.getElementById("triangleResult").innerHTML =
-    "Area = " + area.toFixed(2);
+    "Area = " + area.toFixed(2) + " Sq.Unit";
 }
 
 // Reset Circle

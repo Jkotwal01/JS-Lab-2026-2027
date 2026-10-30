@@ -1,67 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplication Table Generator</title>
+    <title>Multiplication Table</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <h2>Multiplication Table Generator</h2>
 
-<body class="style-class-1">
+    <label>Number:</label>
+    <input type="number" id="numberInput" placeholder="Enter number">
 
-    <!-- Student Details -->
-    <div class="style-class-2">
-        <h3 class="style-class-3">Student Details</h3>
-        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
-        <p class="style-class-4"><b>Roll No:</b> 42149</p>
-        <p class="style-class-4"><b>Batch:</b> R5</p>
-    </div>
+    <br><br>
 
-    <!-- Main Container -->
-    <div class="style-class-5">
+    <label>Range:</label>
+    <input type="number" id="rangeInput" placeholder="Enter range">
 
-        <h2 class="style-class-6">
-            Multiplication Table Generator
-        </h2>
+    <br><br>
 
-        <table class="style-class-7">
-            <tr>
-                <td class="style-class-8">Number</td>
-                <td class="style-class-9">
-                    <input type="number" id="numberInput" placeholder="Enter Number"
-                        class="style-class-10">
-                </td>
-            </tr>
+    <button id="generateBtn">Generate Table</button>
+    <button id="resetBtn">Reset</button>
 
-            <tr>
-                <td class="style-class-8">Range</td>
-                <td class="style-class-9">
-                    <input type="number" id="rangeInput" placeholder="Enter Range"
-                        class="style-class-10">
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2" class="style-class-11">
-                    <button id="generateBtn" class="style-class-12">
-                        Generate Table
-                    </button>
-                    <button id="resetBtn" class="style-class-13">
-                        Reset
-                    </button>
-                </td>
-            </tr>
-        </table>
-
-        <!-- Output -->
-        <div id="result" class="style-class-14">
-        </div>
-
-    </div>
+    <div id="result"></div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>

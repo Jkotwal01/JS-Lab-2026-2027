@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Area Calculator</h1>
+    <div class="cards">
+        <!-- Circle -->
+        <div class="card">
+            <h3>Circle</h3>
+            <label>Radius:</label>
+            <input type="number" id="radius">
+            <button onclick="CircleArea()">Find Area</button>
+            <button onclick="CircleReset()">Reset</button>
+            <p id="CircleResult"></p>
+        </div>
+        <!-- Rectangle -->
+        <div class="card">
+            <h3>Rectangle</h3>
+            <label>Lenght:</label>
+            <input type="number" id="length">
+            <label>Width:</label>
+            <input type="number" id="width">
+            <button onclick="RectangleArea()">Find Area</button>
+            <button onclick="RectangleReset()">Reset</button>
+            <p id="rectangleResult"></p>
+        </div>
+        <!-- Triangle -->
+        <div class="card">
+            <h3>Triangle</h3>
+            <label>Side A:</label>
+            <input type="number" id="a">
+            <label>Side B:</label>
+            <input type="number" id="b">
+            <label>side C:</label>
+            <input type="number" id="c">
+            <button onclick="TriangleArea()">Find Area</button>
+            <button onclick="TriangleReset()">Reset</button>
+            <p id="triangleResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
