@@ -1,25 +1,24 @@
-// Area of Circle:
+// Area of Circle
 function circleArea() {
   let r = Number(document.getElementById("radius").value);
 
-  let area = 3.14159 * r * r;
+  let area = 3.14 * r * r;
 
   document.getElementById("circleResult").innerHTML =
-    "Area = " + area.toFixed(2) + " sq Unit";
+    "Area = " + area.toFixed(2);
 }
 
-// Area of Rectangle:
+// Area of Rectangle
 function rectangleArea() {
   let l = Number(document.getElementById("length").value);
   let w = Number(document.getElementById("width").value);
 
   let area = l * w;
 
-  document.getElementById("rectangleResult").innerHTML =
-    "Area = " + area + " sq Unit";
+  document.getElementById("rectangleResult").innerHTML = "Area = " + area;
 }
 
-// Area of Triangle:
+// Area of Triangle using Heron's Formula
 function triangleArea() {
   let a = Number(document.getElementById("a").value);
   let b = Number(document.getElementById("b").value);
@@ -30,15 +29,24 @@ function triangleArea() {
   let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
   document.getElementById("triangleResult").innerHTML =
-    "Area =  " + area.toFixed(2) + " sq Unit";
+    "Area = " + area.toFixed(2);
 }
 
-function resetAll() {
+// Reset Circle
+function resetCircle() {
   document.getElementById("radius").value = "";
   document.getElementById("circleResult").innerHTML = "";
+}
+
+// Reset Rectangle
+function resetRectangle() {
   document.getElementById("length").value = "";
   document.getElementById("width").value = "";
   document.getElementById("rectangleResult").innerHTML = "";
+}
+
+// Reset Triangle
+function resetTriangle() {
   document.getElementById("a").value = "";
   document.getElementById("b").value = "";
   document.getElementById("c").value = "";
