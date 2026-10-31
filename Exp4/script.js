@@ -1,51 +1,64 @@
-function getInputs() {
-  return {
-    str1: document.getElementById("stringOne").value,
-    str2: document.getElementById("stringTwo").value,
-  };
-}
+// Method 1: Using Strict Equality
+function compareWithStrictEquality() {
+  let str1 = document.getElementById("stringOne").value;
+  let str2 = document.getElementById("stringTwo").value;
 
-function showResult(isMatch, methodName) {
-  const outputBox = document.getElementById("outputDisplay");
-  if (isMatch) {
-    outputBox.innerHTML = `<span style="color: #28a745;">✔ Match!</span> Both strings are identical.<br><small style="color:#666; font-weight:normal;">Method: ${methodName}</small>`;
+  if (str1 === str2) {
+    document.getElementById("outputDisplay").innerHTML =
+      "Both strings are identical.";
   } else {
-    outputBox.innerHTML = `<span style="color: #dc3545;">✘ Mismatch!</span> The strings do not match.<br><small style="color:#666; font-weight:normal;">Method: ${methodName}</small>`;
+    document.getElementById("outputDisplay").innerHTML =
+      "Strings are different.";
   }
 }
 
-function compareWithStrictEquality() {
-  const { str1, str2 } = getInputs();
-  const isMatch = str1 === str2;
-  showResult(isMatch, "Strict Equality (===)");
-}
-
+// Method 2: Using Length and Loop
 function compareWithLengthLoop() {
-  const { str1, str2 } = getInputs();
+  let str1 = document.getElementById("stringOne").value;
+  let str2 = document.getElementById("stringTwo").value;
 
   if (str1.length !== str2.length) {
-    showResult(false, "Length Comparison");
+    document.getElementById("outputDisplay").innerHTML =
+      "Strings are different.";
     return;
   }
 
-  let isMatch = true;
+  let match = true;
+
   for (let i = 0; i < str1.length; i++) {
     if (str1[i] !== str2[i]) {
-      isMatch = false;
+      match = false;
       break;
     }
   }
-  showResult(isMatch, "Length Comparison");
+
+  if (match) {
+    document.getElementById("outputDisplay").innerHTML =
+      "Both strings are identical.";
+  } else {
+    document.getElementById("outputDisplay").innerHTML =
+      "Strings are different.";
+  }
 }
 
+// Method 3: Using localeCompare()
 function compareWithLocaleCompare() {
-  const { str1, str2 } = getInputs();
-  const isMatch = str1.localeCompare(str2) === 0;
-  showResult(isMatch, "localeCompare()");
+  let str1 = document.getElementById("stringOne").value;
+  let str2 = document.getElementById("stringTwo").value;
+
+  if (str1.localeCompare(str2) === 0) {
+    document.getElementById("outputDisplay").innerHTML =
+      "Both strings are identical.";
+  } else {
+    document.getElementById("outputDisplay").innerHTML =
+      "Strings are different.";
+  }
 }
 
+// Reset
 function resetAll() {
   document.getElementById("stringOne").value = "";
   document.getElementById("stringTwo").value = "";
-  document.getElementById("outputDisplay").innerHTML = "Result will appear here...";
+  document.getElementById("outputDisplay").innerHTML =
+    "Result will appear here.";
 }

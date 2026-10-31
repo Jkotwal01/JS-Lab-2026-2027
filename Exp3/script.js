@@ -1,70 +1,57 @@
-// Helper helper function to capture input values safely
-function getMainInput() {
-  return document.getElementById("mainString").value;
-}
-
-// Helper function to update the web UI box
-function updateOutput(message) {
-  document.getElementById("outputDisplay").innerText = message;
-}
-
-// 1. Reverse string logic (Using your loop design)
+// 1. Reverse String
 function reverseString() {
-  const str = getMainInput();
-  let reversed = "";
+  let str = document.getElementById("mainString").value;
+  let rev = "";
 
   for (let i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
+    rev = rev + str[i];
   }
 
-  updateOutput(reversed);
-  return reversed;
+  document.getElementById("output").innerHTML = rev;
 }
 
-// 2. Replace character logic
+// 2. Replace Character
 function replaceCharacter() {
-  const str = getMainInput();
-  const fromChar = document.getElementById("fromChar").value;
-  const toChar = document.getElementById("toChar").value;
+  let str = document.getElementById("mainString").value;
+  let oldChar = document.getElementById("fromChar").value;
+  let newChar = document.getElementById("toChar").value;
 
-  if (!fromChar) {
-    updateOutput("Error: Specify target character to replace.");
+  if (oldChar == "" || newChar == "") {
+    document.getElementById("output").innerHTML =
+      "Enter the old and new character to replace.";
     return;
   }
 
-  const result = str.replaceAll(fromChar, toChar);
-  updateOutput(result);
+  let result = str.replaceAll(oldChar, newChar);
+  document.getElementById("output").innerHTML = result;
 }
 
-// 3. Check Palindrome logic
+// 3. Check Palindrome
 function checkPalindrome() {
-  const str = getMainInput();
+  let str = document.getElementById("mainString").value;
 
-  if (!str.trim()) {
-    updateOutput("Error: Please enter a string first.");
+  if (str.trim() == "") {
+    document.getElementById("output").innerHTML = "Please enter a string.";
     return;
   }
 
-  // Clean up string: convert to lowercase and remove spaces/punctuation for a true check
-  const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  let rev = "";
 
-  // Reverse the cleaned string
-  let reversedStr = "";
-  for (let i = cleanStr.length - 1; i >= 0; i--) {
-    reversedStr += cleanStr[i];
+  for (let i = str.length - 1; i >= 0; i--) {
+    rev = rev + str[i];
   }
 
-  // Compare original and reversed values
-  if (cleanStr === reversedStr) {
-    updateOutput(`Yes, "${str}" is a palindrome!`);
+  if (str.toLowerCase() == rev.toLowerCase()) {
+    document.getElementById("output").innerHTML = "It is a Palindrome.";
   } else {
-    updateOutput(`No, "${str}" is not a palindrome.`);
+    document.getElementById("output").innerHTML = "It is not a Palindrome.";
   }
 }
 
+// 4. Reset
 function resetAll() {
   document.getElementById("mainString").value = "";
   document.getElementById("fromChar").value = "";
   document.getElementById("toChar").value = "";
-  document.getElementById("outputDisplay").innerText = "Result will appear here...";
+  document.getElementById("output").innerHTML = "Result will appear here.";
 }

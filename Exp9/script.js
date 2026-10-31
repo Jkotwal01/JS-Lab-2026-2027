@@ -1,4 +1,6 @@
-document.getElementById("studentForm").addEventListener("submit", function(event) {
+document
+  .getElementById("studentForm")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
 
     let name = document.getElementById("name").value.trim();
@@ -13,42 +15,44 @@ document.getElementById("studentForm").addEventListener("submit", function(event
     let message = document.getElementById("message");
     let errors = [];
 
-    // Check each required field separately
-    if (name === "") errors.push("Name is required.");
-    if (address === "") errors.push("Address is required.");
-    if (city === "") errors.push("City is required.");
-    if (state === "") errors.push("State is required.");
-    if (gender === null) errors.push("Please select a gender.");
-    if (mobile === "") errors.push("Mobile Number is required.");
-    if (email === "") errors.push("Email ID is required.");
+    // Check empty fields
+    if (name == "") errors.push("Name is required.");
+    if (address == "") errors.push("Address is required.");
+    if (city == "") errors.push("City is required.");
+    if (state == "") errors.push("State is required.");
+    if (gender == null) errors.push("Please select gender.");
+    if (mobile == "") errors.push("Mobile number is required.");
+    if (email == "") errors.push("Email is required.");
 
-    // Name validation
+    // Validate name
     let namePattern = /^[A-Za-z ]+$/;
-    if (name !== "" && !namePattern.test(name)) {
-        errors.push("Invalid Name. Name should contain only alphabets.");
+
+    if (name != "" && !namePattern.test(name)) {
+      errors.push("Name must contain only alphabets and spaces.");
     }
 
-    // Mobile validation
+    // Validate mobile number
     let mobilePattern = /^[0-9]{10}$/;
-    if (mobile !== "" && !mobilePattern.test(mobile)) {
-        errors.push("Invalid Mobile Number. Enter exactly 10 digits.");
+
+    if (mobile != "" && !mobilePattern.test(mobile)) {
+      errors.push("Mobile number must contain exactly 10 digits.");
     }
 
-    // Email validation
+    // Validate email
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email !== "" && !emailPattern.test(email)) {
-        errors.push("Invalid Email ID. Please enter a valid email.");
+
+    if (email != "" && !emailPattern.test(email)) {
+      errors.push("Enter a valid email address.");
     }
 
+    // Display errors
     if (errors.length > 0) {
-        message.innerHTML = "<ul><li>" + errors.join("</li><li>") + "</li></ul>";
-        message.style.color = "red";
-        message.className = "error";
-        return;
+      message.innerHTML = errors.join("<br>");
+      message.style.color = "red";
+      return;
     }
 
     // Successful submission
     message.innerHTML = "Congratulations! Welcome, " + name + "!";
     message.style.color = "green";
-    message.className = "success";
-});
+  });

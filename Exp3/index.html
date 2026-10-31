@@ -1,97 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Manipulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body
-    class="style-class-1">
+<body>
 
-    <!-- Student Details -->
-    <div class="style-class-2">
-        <h3 class="style-class-3">Student Details</h3>
-        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
-        <p class="style-class-4"><b>Roll No:</b> 42149</p>
-        <p class="style-class-4"><b>Batch:</b> R5</p>
-    </div>
+    <h2>String Manipulator</h2>
 
-    <!-- Main Container -->
-    <div
-        class="style-class-5">
-        <h3
-            class="style-class-6">
-            String Manipulator</h3>
+    <label>Enter String:</label>
+    <input type="text" id="mainString" placeholder="Enter a string">
 
-        <!-- Input Section -->
-        <div class="style-class-7">
-            <label for="mainString"
-                class="input-label">Enter
-                String:</label>
-            <input type="text" id="mainString" placeholder="Type your text here..."
-                class="input-field">
-        </div>
+    <h3>1. Reverse String</h3>
+    <button onclick="reverseString()">Reverse</button>
 
-        <!-- Action 1: Reverse -->
-        <div
-            class="style-class-10">
-            <h5 class="style-class-11">1. Reverse String</h5>
-            <button onclick="reverseString()"
-                class="style-class-12">Reverse
-                Now</button>
-        </div>
+    <h3>2. Replace Character</h3>
+    <input type="text" id="fromChar" placeholder="Character to replace" maxlength="1">
+    <input type="text" id="toChar" placeholder="New character" maxlength="1">
+    <button onclick="replaceCharacter()">Replace</button>
 
-        <!-- Action 2: Replace -->
-        <div
-            class="style-class-10">
-            <h5 class="style-class-13">2. Replace Character</h5>
-            <div class="style-class-14">
-                <div class="style-class-15">
-                    <label for="fromChar"
-                        class="style-class-16">Replace this:</label>
-                    <input type="text" id="fromChar" maxlength="1" placeholder="e.g., a"
-                        class="style-class-17">
-                </div>
-                <div class="style-class-15">
-                    <label for="toChar" class="style-class-16">With
-                        this:</label>
-                    <input type="text" id="toChar" maxlength="1" placeholder="e.g., x"
-                        class="style-class-17">
-                </div>
-            </div>
-            <button onclick="replaceCharacter()"
-                class="style-class-18">Replace
-                Now</button>
-        </div>
+    <h3>3. Check Palindrome</h3>
+    <button onclick="checkPalindrome()">Check</button>
 
-        <!-- Action 3: Palindrome Checker -->
-        <div
-            class="style-class-19">
-            <h5 class="style-class-20">3. Check Palindrome</h5>
-            <button onclick="checkPalindrome()"
-                class="style-class-21">Check
-                Status</button>
-        </div>
+    <h3>Output:</h3>
+    <p id="output">Result will appear here.</p>
 
-        <!-- Display Output Box -->
-        <div
-            class="style-class-22">
-            <span
-                class="style-class-23">Output:</span>
-            <div id="outputDisplay" class="style-class-24">
-                Result will appear here...</div>
-        </div>
+    <button onclick="resetAll()">Reset</button>
 
-        <button onclick="resetAll()"
-            class="style-class-25">
-            Reset
-        </button>
-    </div>
-
-    <!-- Link your external js file here -->
     <script src="script.js"></script>
 </body>
 

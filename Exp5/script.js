@@ -1,48 +1,46 @@
 var countdown;
 
-// Start the countdown
 function startCountdown() {
-  // 1) Set a Valid End Date
-  // Get date and time entered from frontend
-  var date = document.getElementById("endDate").value;
-  var time = document.getElementById("endTime").value;
+  let date = document.getElementById("endDate").value;
+  let time = document.getElementById("endTime").value;
 
-  // Check whether date and time are entered
+  // Check input
   if (date == "" || time == "") {
     document.getElementById("countdown").innerHTML =
       "Please select date and time";
     return;
   }
 
-  // Combine date and time
-  var deadline = new Date(date + " " + time).getTime();
+  // Create deadline
+  let deadline = new Date(date + "T" + time).getTime();
 
-  // Clear previous countdown if any
+  // Stop previous timer
   clearInterval(countdown);
 
-  // 2) Calculate Remaining Time
+  // Update every second
   countdown = setInterval(function () {
-    // Current date and time
-    var now = new Date().getTime();
+    let now = new Date().getTime();
+    let remainingTime = deadline - now;
 
-    // Calculate remaining time
-    var remainingTime = deadline - now;
+    // Check if countdown is over
+    if (remainingTime <= 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown").innerHTML = "Expired";
+      return;
+    }
 
-    // Calculate days
-    var days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    // Calculate days, hours, minutes and seconds
+    let days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
 
-    // Calculate hours
-    var hours = Math.floor(
+    let hours = Math.floor(
       (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
 
-    // Calculate minutes
-    var minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
 
-    // Calculate seconds
-    var seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-    // 3) Output the result
+    // Display result
     document.getElementById("countdown").innerHTML =
       days +
       " Days " +
@@ -52,19 +50,15 @@ function startCountdown() {
       " Minutes " +
       seconds +
       " Seconds";
-
-    // 4) Write some text if countdown is over
-    if (remainingTime < 0) {
-      clearInterval(countdown);
-
-      document.getElementById("countdown").innerHTML = "Expired";
-    }
   }, 1000);
 }
 
 function resetCountdown() {
   clearInterval(countdown);
+
   document.getElementById("endDate").value = "";
   document.getElementById("endTime").value = "";
-  document.getElementById("countdown").innerHTML = "00 Days 00 Hours 00 Minutes 00 Seconds";
+
+  document.getElementById("countdown").innerHTML =
+    "00 Days 00 Hours 00 Minutes 00 Seconds";
 }

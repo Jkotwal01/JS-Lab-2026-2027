@@ -1,87 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>String Comparator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body
-    class="style-class-1">
+<body>
 
-    <div
-        class="style-class-2">
-        <h3 class="style-class-3">Student Details</h3>
-        <p class="style-class-4"><b>Name:</b> Jay Kotwal</p>
-        <p class="style-class-4"><b>Roll No:</b> 42149</p>
-        <p class="style-class-4"><b>Batch:</b> R5</p>
-    </div>
+    <h2>String Comparator</h2>
 
-    <div
-        class="style-class-5">
-        <h3
-            class="style-class-6">
-            String Comparator</h3>
+    <label>String 1:</label>
+    <input type="text" id="stringOne" placeholder="Enter first string">
 
-        <div class="style-class-7">
-            <label for="stringOne"
-                class="input-label">String
-                1:</label>
-            <input type="text" id="stringOne" placeholder="Enter first string..."
-                class="input-field">
-        </div>
+    <br><br>
 
-        <div class="style-class-10">
-            <label for="stringTwo"
-                class="input-label">String
-                2:</label>
-            <input type="text" id="stringTwo" placeholder="Enter second string..."
-                class="input-field">
-        </div>
+    <label>String 2:</label>
+    <input type="text" id="stringTwo" placeholder="Enter second string">
 
-        <div
-            class="style-class-11">
-            <h5 class="style-class-12">Method 1: Strictly Equal
-                To (===)</h5>
-            <button onclick="compareWithStrictEquality()"
-                class="style-class-13">Compare
-                with ===</button>
-        </div>
+    <br><br>
+    
+    <button onclick="compareWithStrictEquality()">Compare using ===</button>
+    <br>
+    <button onclick="compareWithLengthLoop()">Compare using Loop</button>
+    <br>
+    <button onclick="compareWithLocaleCompare()">Compare using localeCompare()</button>
 
-        <div
-            class="style-class-11">
-            <h5 class="style-class-14">Method 2: Using Length
-                Check</h5>
-            <button onclick="compareWithLengthLoop()"
-                class="style-class-15">Compare
-                with Length</button>
-        </div>
+    <h3>Output:</h3>
+    <p id="outputDisplay">Result will appear here.</p>
 
-        <div
-            class="style-class-16">
-            <h5 class="style-class-17">Method 3: localeCompare()
-                Function</h5>
-            <button onclick="compareWithLocaleCompare()"
-                class="style-class-18">Compare
-                with localeCompare</button>
-        </div>
-
-        <div
-            class="style-class-19">
-            <span
-                class="style-class-20">Output
-                Window:</span>
-            <div id="outputDisplay" class="style-class-21">
-                Result will appear here...</div>
-        </div>
-
-        <button onclick="resetAll()"
-            class="style-class-22">
-            Reset
-        </button>
-    </div>
+    <button onclick="resetAll()">Reset</button>
 
     <script src="script.js"></script>
 </body>

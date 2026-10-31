@@ -1,105 +1,128 @@
 let currentArray = [];
 
+// 1. Generate Array
 function generateArray() {
-    const length = parseInt(document.getElementById("arrayLength").value);
-    if (isNaN(length) || length <= 0) {
-        updateOutput("Please enter a valid positive array length.");
-        return;
-    }
-    
-    currentArray = [];
-    for (let i = 1; i <= length; i++) {
-        currentArray.push(i);
-    }
-    updateOutput("Array generated successfully.");
+  let length = parseInt(document.getElementById("arrayLength").value);
+
+  if (isNaN(length) || length <= 0) {
+    updateOutput("Enter a valid positive array length.");
+    return;
+  }
+
+  currentArray = [];
+
+  for (let i = 1; i <= length; i++) {
+    currentArray.push(i);
+  }
+
+  updateOutput("Array generated successfully.");
 }
 
+// Display Array and Result
 function updateOutput(message) {
-    const output = document.getElementById("outputDisplay");
-    output.innerHTML = `Current Array: [${currentArray.join(", ")}]<br><br>Result: <span style="color: #0056b3;">${message}</span>`;
+  document.getElementById("outputDisplay").innerHTML =
+    "Current Array: [" +
+    currentArray.join(", ") +
+    "]<br><br>Result: " +
+    message;
 }
 
-// 1. Remove Element (With Method)
+// 2. Remove Element Using Array Methods
 function removeElementWithMethod() {
-    const elToDelete = parseInt(document.getElementById("deleteInput").value);
-    if (isNaN(elToDelete)) return updateOutput("Enter a valid element to delete.");
-    
-    const index = currentArray.indexOf(elToDelete);
-    if (index !== -1) {
-        currentArray.splice(index, 1);
-        updateOutput(`Element ${elToDelete} removed using splice().`);
-    } else {
-        updateOutput(`Element ${elToDelete} not found in array.`);
-    }
+  let element = parseInt(document.getElementById("deleteInput").value);
+
+  let index = currentArray.indexOf(element);
+
+  if (isNaN(element)) {
+    updateOutput("Enter a valid element to delete.");
+  } else if (index != -1) {
+    currentArray.splice(index, 1);
+    updateOutput("Element removed using splice().");
+  } else {
+    updateOutput("Element not found.");
+  }
 }
 
-// 1. Remove Element (Without Method)
+// 3. Remove Element Without Array Methods
 function removeElementWithoutMethod() {
-    const elToDelete = parseInt(document.getElementById("deleteInput").value);
-    if (isNaN(elToDelete)) return updateOutput("Enter a valid element to delete.");
-    
-    let newArray = [];
-    let found = false;
-    for (let i = 0; i < currentArray.length; i++) {
-        if (currentArray[i] === elToDelete && !found) {
-            found = true; // Remove only the first occurrence
-        } else {
-            newArray[newArray.length] = currentArray[i];
-        }
-    }
-    
-    if (found) {
-        currentArray = newArray;
-        updateOutput(`Element ${elToDelete} removed using loop.`);
+  let element = parseInt(document.getElementById("deleteInput").value);
+  let newArray = [];
+  let found = false;
+
+  if (isNaN(element)) {
+    updateOutput("Enter a valid element to delete.");
+    return;
+  }
+
+  for (let i = 0; i < currentArray.length; i++) {
+    if (currentArray[i] == element && !found) {
+      found = true;
     } else {
-        updateOutput(`Element ${elToDelete} not found in array.`);
+      newArray[newArray.length] = currentArray[i];
     }
+  }
+
+  if (found) {
+    currentArray = newArray;
+    updateOutput("Element removed using loop.");
+  } else {
+    updateOutput("Element not found.");
+  }
 }
 
-// 2. Check Contains (With Method)
+// 4. Search Using Array Method
 function checkContainsWithMethod() {
-    const elToSearch = parseInt(document.getElementById("searchInput").value);
-    if (isNaN(elToSearch)) return updateOutput("Enter a valid element to search.");
-    
-    const contains = currentArray.includes(elToSearch);
-    if (contains) {
-        updateOutput(`Array contains ${elToSearch} (checked using includes()).`);
-    } else {
-        updateOutput(`Array does NOT contain ${elToSearch} (checked using includes()).`);
-    }
+  let element = parseInt(document.getElementById("searchInput").value);
+
+  if (isNaN(element)) {
+    updateOutput("Enter a valid element to search.");
+    return;
+  }
+
+  if (currentArray.includes(element)) {
+    updateOutput("Element found using includes().");
+  } else {
+    updateOutput("Element not found.");
+  }
 }
 
-// 2. Check Contains (Without Method)
+// 5. Search Without Array Method
 function checkContainsWithoutMethod() {
-    const elToSearch = parseInt(document.getElementById("searchInput").value);
-    if (isNaN(elToSearch)) return updateOutput("Enter a valid element to search.");
-    
-    let contains = false;
-    for (let i = 0; i < currentArray.length; i++) {
-        if (currentArray[i] === elToSearch) {
-            contains = true;
-            break;
-        }
+  let element = parseInt(document.getElementById("searchInput").value);
+  let found = false;
+
+  if (isNaN(element)) {
+    updateOutput("Enter a valid element to search.");
+    return;
+  }
+
+  for (let i = 0; i < currentArray.length; i++) {
+    if (currentArray[i] == element) {
+      found = true;
+      break;
     }
-    
-    if (contains) {
-        updateOutput(`Array contains ${elToSearch} (checked using loop).`);
-    } else {
-        updateOutput(`Array does NOT contain ${elToSearch} (checked using loop).`);
-    }
+  }
+
+  if (found) {
+    updateOutput("Element found using loop.");
+  } else {
+    updateOutput("Element not found.");
+  }
 }
 
-// 3. Empty Array
+// 6. Empty Array
 function emptyArray() {
-    currentArray = [];
-    updateOutput("Array has been emptied.");
+  currentArray = [];
+  updateOutput("Array emptied successfully.");
 }
 
-// Reset All
+// 7. Reset All
 function resetAll() {
-    currentArray = [];
-    document.getElementById("arrayLength").value = "";
-    document.getElementById("deleteInput").value = "";
-    document.getElementById("searchInput").value = "";
-    document.getElementById("outputDisplay").innerHTML = "Current Array: []<br><br>Result: ";
+  currentArray = [];
+
+  document.getElementById("arrayLength").value = "";
+  document.getElementById("deleteInput").value = "";
+  document.getElementById("searchInput").value = "";
+
+  updateOutput("");
 }
